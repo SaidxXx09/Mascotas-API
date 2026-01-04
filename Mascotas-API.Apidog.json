@@ -1,0 +1,697 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Mascotas-API",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1168241",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "es-ES",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Servidor predeterminado",
+        "moduleId": 1029523
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 6086452,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1029523,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "GET - Obtener todas las mascotas",
+          "api": {
+            "id": "26238304",
+            "method": "get",
+            "path": "/mascotas",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {},
+            "responses": [
+              {
+                "id": "124772935",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "especie": {
+                        "type": "string"
+                      },
+                      "fechaNacimient": {
+                        "type": "integer"
+                      },
+                      "propietario": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "nombre",
+                      "especie",
+                      "fechaNacimient",
+                      "propietario"
+                    ]
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Éxito",
+                "data": "[{\"id\":1,\"nombre\":\"Maldi\",\"especie\":\"Lobo\",\"fechaNacimient\":2012,\"propietario\":\"Said\"},{\"id\":2,\"nombre\":\"Atenea\",\"especie\":\"Loba\",\"fechaNacimient\":2021,\"propietario\":\"Camilo\"}]",
+                "responseId": "124772935"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "required": true,
+              "parameters": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 10,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1029523,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "GET - Obtener por ID",
+          "api": {
+            "id": "26238306",
+            "method": "get",
+            "path": "/mascotas/1",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {},
+            "responses": [
+              {
+                "id": "141977838",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nombre": {
+                      "type": "string"
+                    },
+                    "especie": {
+                      "type": "string"
+                    },
+                    "fechaNacimient": {
+                      "type": "integer"
+                    },
+                    "propietario": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "nombre",
+                    "especie",
+                    "fechaNacimient",
+                    "propietario"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Éxito",
+                "data": "{\"id\":1,\"nombre\":\"Maldi\",\"especie\":\"Lobo\",\"fechaNacimient\":2012,\"propietario\":\"Said\"}",
+                "responseId": "141977838"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "required": true,
+              "parameters": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 20,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1029523,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "GET - Obtener menores",
+          "api": {
+            "id": "26238335",
+            "method": "get",
+            "path": "/mascotas/menores",
+            "parameters": {
+              "query": [
+                {
+                  "name": "edad",
+                  "required": true,
+                  "example": "5",
+                  "description": "",
+                  "id": "1ohje8c94S",
+                  "type": "string"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {},
+            "responses": [
+              {
+                "id": "118479022",
+                "code": 200,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "nombre": {
+                        "type": "string"
+                      },
+                      "especie": {
+                        "type": "string"
+                      },
+                      "fechaNacimient": {
+                        "type": "integer"
+                      },
+                      "propietario": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Éxito",
+                "data": "[{\"id\":2,\"nombre\":\"Atenea\",\"especie\":\"Loba\",\"fechaNacimient\":2021,\"propietario\":\"Camilo\"}]",
+                "responseId": "118479022"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "required": true,
+              "parameters": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 30,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1029523,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "POST - Agregar",
+          "api": {
+            "id": "26238576",
+            "method": "post",
+            "path": "/mascotas",
+            "parameters": {
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "required": true,
+                  "example": "application/json",
+                  "description": "",
+                  "id": "CDRXIe86Uv",
+                  "type": "string"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {},
+            "responses": [
+              {
+                "id": "100888644",
+                "code": 201,
+                "name": "Éxito",
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nombre": {
+                      "type": "string"
+                    },
+                    "especie": {
+                      "type": "string"
+                    },
+                    "fechaNacimient": {
+                      "type": "integer"
+                    },
+                    "propietario": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "nombre",
+                    "especie",
+                    "fechaNacimient",
+                    "propietario"
+                  ]
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Éxito",
+                "data": "{\"id\":3,\"nombre\":\"Asud\",\"especie\":\"Gato\",\"fechaNacimient\":2023,\"propietario\":\"Said\"}",
+                "responseId": "100888644"
+              }
+            ],
+            "requestBody": {
+              "type": "application/json",
+              "required": true,
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "especie": {
+                    "type": "string"
+                  },
+                  "fechaNacimient": {
+                    "type": "integer"
+                  },
+                  "propietario": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "nombre",
+                  "especie",
+                  "fechaNacimient",
+                  "propietario"
+                ]
+              },
+              "examples": [
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n  \"id\": 3,\r\n  \"nombre\": \"Asud\",\r\n  \"especie\": \"Gato\",\r\n  \"fechaNacimient\": 2023,\r\n  \"propietario\": \"Said\"\r\n}\r\n\r\n",
+                  "name": "Ejemplo"
+                }
+              ],
+              "parameters": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 40,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1029523,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [],
+  "schemaCollection": [],
+  "securitySchemeCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.9109225"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 741544,
+      "name": "Positivo",
+      "description": "Entradas válidas y resultados esperados correctos, que representan un uso típico."
+    },
+    {
+      "id": 741545,
+      "name": "Negativo",
+      "description": "Entradas negativas o no válidas, como campos faltantes, tipos incorrectos, métodos no admitidos, etc."
+    },
+    {
+      "id": 741546,
+      "name": "Límite",
+      "description": "Condiciones extremas o de borde, como longitud máxima de cadena, valores vacíos, cero, null, etc."
+    },
+    {
+      "id": 741547,
+      "name": "Seguridad",
+      "description": "Casos que pueden exponer riesgos de seguridad del API."
+    },
+    {
+      "id": 741548,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 2391960,
+      "name": "Solo campos obligatorios",
+      "description": "Enviar solo los campos obligatorios con valores válidos, omitiendo todos los opcionales, para probar la solicitud mínima válida."
+    },
+    {
+      "id": 2391961,
+      "name": "Semántica válida",
+      "description": "Usar valores sintácticamente correctos que también tengan sentido en la lógica de negocio o el contexto del dominio."
+    },
+    {
+      "id": 2391962,
+      "name": "Cobertura de combinaciones de enum",
+      "description": "Para todos los parámetros de tipo enumeración, aplicar diseño ortogonal para construir sistemáticamente combinaciones de casos de prueba de parámetros y sus valores de enum, con el fin de cubrir los enums."
+    },
+    {
+      "id": 2391963,
+      "name": "Otros casos positivos",
+      "description": "Proporcionar entradas realistas y válidas que cumplan la especificación del API, produciendo el resultado correcto y esperado."
+    },
+    {
+      "id": 2391964,
+      "name": "Campos obligatorios ausentes",
+      "description": "Omitir uno o más campos obligatorios en el cuerpo o parámetros de la solicitud."
+    },
+    {
+      "id": 2391965,
+      "name": "Valores no válidos",
+      "description": "Proporcionar valores con tipo y formato correctos, pero lógicamente no válidos para el campo."
+    },
+    {
+      "id": 2391966,
+      "name": "Errores de tipo",
+      "description": "Usar valores con tipos de datos incorrectos, como enviar una cadena en lugar de un entero."
+    },
+    {
+      "id": 2391967,
+      "name": "Errores de formato",
+      "description": "Proporcionar valores con un formato incorrecto, p. ej., patrón de fecha erróneo, dirección de correo mal formada."
+    },
+    {
+      "id": 2391968,
+      "name": "Errores semánticos",
+      "description": "Usar valores sintáctica y formalmente correctos que sean lógicamente imposibles o violen reglas del dominio."
+    },
+    {
+      "id": 2391969,
+      "name": "Otros casos negativos",
+      "description": "Proporcionar entradas inválidas o inesperadas que deberían activar el manejo de errores o el rechazo por parte del API."
+    },
+    {
+      "id": 2391970,
+      "name": "Nulo",
+      "description": "Debe ser el literal JSON `null` (no vacío, no \"null\")."
+    },
+    {
+      "id": 2391971,
+      "name": "Cero",
+      "description": "Debe ser el literal numérico 0."
+    },
+    {
+      "id": 2391972,
+      "name": "Valores vacíos",
+      "description": "Debe ser \"\"."
+    },
+    {
+      "id": 2391973,
+      "name": "Valores máximos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 2391974,
+      "name": "Valores mínimos",
+      "description": "Proporcionar los valores mínimo y máximo permitidos exactos para campos numéricos o de fecha."
+    },
+    {
+      "id": 2391975,
+      "name": "Desbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 2391976,
+      "name": "Subdesbordamiento",
+      "description": "Proporcionar valores justo más allá de los límites mínimo o máximo permitidos."
+    },
+    {
+      "id": 2391977,
+      "name": "Cadenas demasiado largas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 2391978,
+      "name": "Cadenas demasiado cortas",
+      "description": "Proporcionar cadenas más largas que la longitud máxima permitida, o más cortas que la longitud mínima requerida."
+    },
+    {
+      "id": 2391979,
+      "name": "Autorización a nivel de objeto rota",
+      "description": "Los usuarios acceden o manipulan objetos de datos sin la autorización adecuada."
+    },
+    {
+      "id": 2391980,
+      "name": "Control de acceso",
+      "description": "Restringir los recursos y acciones a los que los usuarios pueden acceder según roles, permisos o atributos."
+    },
+    {
+      "id": 2391981,
+      "name": "Fallos de autenticación",
+      "description": "La autenticación es débil, está mal configurada o se evita, permitiendo acceso no autorizado."
+    },
+    {
+      "id": 2391982,
+      "name": "Inyección SQL",
+      "description": "Insertar código SQL malicioso en entradas para probar vulnerabilidades de inyección SQL."
+    },
+    {
+      "id": 2391983,
+      "name": "Inyección XSS",
+      "description": "Inyectar JavaScript o etiquetas HTML para probar vulnerabilidades de XSS."
+    },
+    {
+      "id": 2391984,
+      "name": "Entrada fuzz",
+      "description": "Enviar cargas útiles grandes o generadas aleatoriamente para probar validación de entrada y estabilidad."
+    },
+    {
+      "id": 2391985,
+      "name": "Inyección de comandos",
+      "description": "Insertar comandos de shell en entradas para probar vulnerabilidades de ejecución de comandos."
+    },
+    {
+      "id": 2391986,
+      "name": "Inyección JSON",
+      "description": "Insertar estructuras JSON maliciosas o inesperadas para probar el análisis y validación."
+    },
+    {
+      "id": 2391987,
+      "name": "Inyección NoSQL",
+      "description": "Proporcionar consultas u operadores específicos de NoSQL para probar inyección."
+    },
+    {
+      "id": 2391988,
+      "name": "Otros",
+      "description": "Casos no clasificados en categorías existentes."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1029523",
+      "name": "Módulo predeterminado",
+      "description": "",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
