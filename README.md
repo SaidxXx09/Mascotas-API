@@ -28,6 +28,8 @@ Ejercicio práctico de una API REST sencilla desarrollada con Spring Boot. Permi
 
 ## Cómo ejecutar
 
+La primera opcion es descargar el proyecto como zip y acto seguido descomprimirlo. De mismo modo, es recomendable utilizar IntelliJ IDEA para ejecutar correctamente desde un IDE.
+
 ```bash
 cd ejercicio2
 ./gradlew bootRun        # Linux / macOS
